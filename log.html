@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login page</title>
+        <style>
+        body{
+            margin: 0;
+            padding-top: 80px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-family: Arial,  sans-serif;
+             background: linear-gradient(to right, #8e2de2, #4a00e0);
+        }
+        .login-box{
+            width: 230px;
+            padding: 25px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .login-box h2{
+            text-align: center;
+            margin-bottom: 20px;
+            columns: #4a00e0;
+        }
+        .login-box label{
+            font-weight: bold;
+            color: #333;
+        }
+        .login-box input[type="text" ]
+        .login-box input[type="password"]{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #4a00e0;
+        }
+        .login-box input[type="submit"]{
+            width: 50%;
+            padding:10px ;
+            color:white;
+            background-color: #4a00e0;
+            border: none;
+            border-radius: 6px;
+            font-size:16px ;
+            cursor: pointer;
+        }
+        </style>
+    </head>
+    <body>
+        <section class="login-box">
+        <h2>Login</h2>
+        <form id="loginform" onsubmit="return formvalidate()">
+        <P>
+        <label for="emailid">Email Id</label>
+        <input type="text" name="emailid" id="emailid">
+        </P>
+        <P>
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password">
+        </P>
+        <p>
+            <input type="submit" value="submit">
+        </p>
+        </form>
+        <script>
+            function formvalidate(){
+                var email=document.getElementById("emailid").value;
+                var password=document.getElementById("password").value;
+                if(emailid === ""|| password === ""){
+                    alert("please enter all information")
+                    return false;
+                }
+                alert("Login successful!")
+                    return true;
+            }
+        </script>
+        </section>
+    </body>
+</html>
